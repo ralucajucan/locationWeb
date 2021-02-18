@@ -1,0 +1,28 @@
+<div *ngIf="getStatus() == true">
+  <h2>Map Page</h2>
+  <button class="cancelbtn" (click)="logOut()">Log Out</button>
+  <p>Hello, {{ getUser().firstName }} {{getUser().lastName}},</p>
+  <h3>Accesible users:</h3>
+  <ul class="users">
+    <div *ngIf="getUserList() != null">
+      <li
+        *ngFor="let user of getUserList()"
+        [class.selected]="user === selectedUser"
+        (click)="onSelect(user)"
+      >
+        <span class="badge">{{ user.id }}</span> {{ user.firstName }}
+        {{ user.lastName }}
+      </li>
+    </div>
+    <div *ngIf="getUserList() == null">
+      <li>
+        <span class="badge">{{ getUser().id }}</span> {{ getUser().firstName }}
+        {{ getUser().lastName }}
+      </li>
+    </div>
+  </ul>
+  <google-map
+  [height]=700
+  [width]=null
+  ></google-map>
+</div>

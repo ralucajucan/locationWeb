@@ -1,0 +1,29 @@
+<div *ngIf="getStatus()!=true">
+  <h1 style="text-align: center">Login Page</h1>
+  <form
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="imgcontainer">
+      <img src="../../assets/img_avatar2.png" alt="Avatar" class="avatar" />
+    </div>
+    <label
+      ><b>Email:</b>
+      <input
+        formControlName="email"
+        placeholder="admin@admin.com"
+        type="text"
+      />
+    </label>
+    <br />
+    <label
+      ><b>Password:</b>
+      <input
+        formControlName="password"
+        placeholder="Password1!"
+        type="password"
+      />
+    </label>
+    <button class="button" type="submit">Login</button>
+  </form>
+</div>

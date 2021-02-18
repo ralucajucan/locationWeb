@@ -1,0 +1,80 @@
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 2px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.users {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.users li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.users li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.users li.selected {
+  background-color: #CFD8DC;
+  color: white;
+}
+.users li.selected:hover {
+  background-color: #BBD8DC;
+  color: white;
+}
+.users .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color:#405061;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+google-map {
+  background-color: yellowgreen;
+  position:fixed;
+  top: 0.1em;
+  right:0.1em;
+  width:70%;
+}
+@media only screen and (max-width: 900px) {
+  google-map{
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  google-map{
+    width: 48%;
+  }
+}
